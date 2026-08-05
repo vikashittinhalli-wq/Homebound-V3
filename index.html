@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="theme-color" content="#fffaf4" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="Homebound" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="apple-touch-icon" href="assets/homebound-icon-180.png" />
+  <link rel="icon" href="assets/homebound-icon-192.png" />
+  <link rel="stylesheet" href="styles.css?v=9" />
+  <title>Homebound</title>
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <div class="brand-mark" aria-hidden="true">🏡</div>
+      <div class="brand-copy"><div class="brand-name">Homebound</div><div class="brand-tagline">One step at a time. One dream at a time.</div></div>
+      <button class="icon-button" id="notificationsButton" aria-label="Open notifications"><span aria-hidden="true">🔔</span><b id="notificationBadge">3</b></button>
+    </header>
+
+    <main id="homePage" class="page home-page active-page">
+      <section class="recovery-banner" id="recoveryBanner"><span class="recovery-icon">🛟</span><div><strong>Recovery snapshot available</strong><small>Your latest safe copy is ready if you need it.</small></div><button id="dismissRecovery" class="plain-button">Dismiss</button></section>
+      <section class="hero-card" aria-labelledby="greetingTitle">
+        <div class="hero-content">
+          <span class="date-label" id="todayLabel"></span>
+          <h1 id="greetingTitle">Good morning ☀️</h1>
+          <p>You’ve cleared <strong id="clearedTogether">$0</strong> together. ❤️<br /><span>Every payment brings your future home a little closer.</span></p>
+        </div>
+        <div class="hero-image" role="img" aria-label="Anime-inspired illustration of you and your wife, seen from behind, looking toward your future home"></div>
+        <div class="encouragement">💛 <span>Keep going, you’re doing great!</span></div>
+      </section>
+      <section class="section-block"><div class="section-title-row"><h2>Today’s focus</h2><button class="plain-button" data-detail="today">See all</button></div><div class="focus-grid"><button class="focus-card next-stop" data-detail="next-stop"><span class="focus-icon">📍</span><span class="focus-copy"><strong>Next Stop</strong><small id="homeNextStopName">Scenic Lookout</small><small id="homeNextStopDue">Due in 2 days</small></span><span class="status planned">Planned</span><span class="arrow">›</span></button><button class="focus-card adventure" data-detail="next-adventure"><span class="focus-icon">🌊</span><span class="focus-copy"><strong>Next Adventure</strong><small>Esperance</small><small>103 days to go</small></span><span class="status soon">Soon</span><span class="arrow">›</span></button></div></section>
+      <section class="section-block carousel-section"><div class="section-title-row"><h2>Our life</h2><span class="scroll-hint">Swipe to see more →</span></div><div class="life-carousel" id="lifeCarousel"><button class="life-card journey" data-tab="journey"><span class="life-art">🚗</span><strong>Journey</strong><b id="journeyPercent">0%</b><span class="bar"><i id="journeyBar" style="--progress:0%"></i></span><small>To freedom</small></button><button class="life-card garden" data-tab="garden"><span class="life-art">🌳</span><strong>Garden</strong><b>Growing 🌱</b><span class="bar"><i style="--progress:62%"></i></span><small>Our future</small></button><button class="life-card dreams" data-detail="dreams"><span class="life-art">⭐</span><strong>Dreams</strong><b>6 Active</b><span class="bar"><i style="--progress:47%"></i></span><small>Our why</small></button><button class="life-card memories" data-detail="memories"><span class="life-art">📖</span><strong>Memories</strong><b>42 Moments</b><span class="bar"><i style="--progress:55%"></i></span><small>Our story</small></button><button class="life-card wins" data-tab="today"><span class="life-art">📅</span><strong>Today</strong><b id="homeTodayPosition">$0 left</b><span class="bar"><i id="homeTodayBar" style="--progress:50%"></i></span><small>Daily flow</small></button><button class="life-card adventures" data-detail="adventures"><span class="life-art">🧭</span><strong>Adventures</strong><b>New places await</b><span class="bar"><i style="--progress:39%"></i></span><small>Our adventures</small></button></div><div class="carousel-dots"><i class="active"></i><i></i><i></i><i></i></div></section>
+      <section class="section-block quick-section"><div class="section-title-row"><h2>Quick actions</h2></div><div class="quick-actions"><button data-action="payment"><span class="quick-icon purple">＋</span><small>Payment</small></button><button data-action="memory"><span class="quick-icon green">📷</span><small>Memory</small></button><button data-action="dream"><span class="quick-icon yellow">★</span><small>Dream</small></button><button data-action="backup"><span class="quick-icon blue">☁</span><small>Backup</small></button></div></section>
+    </main>
+
+    <main id="journeyPage" class="page journey-page" hidden>
+      <section class="journey-intro"><div><span class="eyebrow">YOUR ROAD HOME</span><h1>Journey</h1><p>Track every milestone. One step at a time.</p></div><button class="add-circle" id="addMilestoneButton" aria-label="Add milestone">＋</button></section>
+      <section class="journey-summary"><div><span>Overall progress</span><strong id="overallJourneyPercent">0%</strong><small id="overallJourneyCaption">You’re on your way.</small></div><div class="summary-ring" id="summaryRing"><span id="ringPercent">0%</span></div><dl><div><dt>Total starting</dt><dd id="totalStarting">$0</dd></div><div><dt>Total cleared</dt><dd id="totalCleared">$0</dd></div><div><dt>Total left</dt><dd id="totalLeft">$0</dd></div></dl></section>
+      <section class="milestone-map" id="milestoneMap" aria-label="Financial milestone map"></section>
+    </main>
+
+    <main id="gardenPage" class="page garden-page" hidden>
+      <section class="garden-header">
+        <span class="eyebrow">GROWING OUR FUTURE TOGETHER</span>
+        <h1>Garden 🌳</h1>
+        <p>Every healthy choice helps something beautiful grow.</p>
+      </section>
+
+      <section class="garden-hero" aria-labelledby="gardenStageTitle">
+        <div class="garden-scene" id="gardenScene" aria-hidden="true">
+          <div class="garden-sun">☀️</div><div class="garden-cloud cloud-one">☁️</div><div class="garden-cloud cloud-two">☁️</div>
+          <div class="garden-tree" id="gardenTree">🌱</div>
+          <div class="garden-ground">🌼 🌿 🌸 🌱 🌷</div>
+        </div>
+        <div class="garden-hero-copy">
+          <small>YOUR GARDEN</small>
+          <h2 id="gardenStageTitle">New Sprout</h2>
+          <p id="gardenStageMessage">A strong future starts with one small seed.</p>
+          <div class="garden-progress"><span><b id="gardenPercent">0%</b> grown</span><div class="bar"><i id="gardenBar" style="--progress:0%"></i></div></div>
+        </div>
+      </section>
+
+      <section class="garden-section">
+        <div class="section-title-row"><h2>What’s growing?</h2><span class="garden-caption">Tap a card to explore</span></div>
+        <div class="garden-card-grid">
+          <button class="garden-card home-growth" data-garden-card="future-home"><span>🏡</span><div><strong>Future Home</strong><small id="futureHomeStatus">Planting the foundation</small></div><b>›</b></button>
+          <button class="garden-card relationship-growth" data-garden-card="relationship"><span>❤️</span><div><strong>Relationship</strong><small>Stronger every day</small></div><b>›</b></button>
+          <button class="garden-card finance-growth" data-garden-card="financial-health"><span>💰</span><div><strong>Financial Health</strong><small id="financialHealthStatus">Taking root</small></div><b>›</b></button>
+          <button class="garden-card personal-growth" data-garden-card="personal-growth"><span>🌱</span><div><strong>Personal Growth</strong><small>Keep learning together</small></div><b>›</b></button>
+        </div>
+      </section>
+
+      <section class="garden-section recent-wins-card">
+        <div class="section-title-row"><h2>Recent wins 🌸</h2><button class="plain-button" data-garden-card="recent-wins">See all</button></div>
+        <div class="garden-wins" id="gardenWins"></div>
+      </section>
+
+      <section class="garden-section reflection-card">
+        <div class="reflection-icon">🌼</div>
+        <div><h2>Daily reflection</h2><p>What are we grateful for today?</p></div>
+        <textarea id="gardenReflection" maxlength="280" placeholder="Write a small note…"></textarea>
+        <div class="reflection-footer"><small id="reflectionSavedLabel">Saved only on this phone</small><button id="saveReflectionButton" class="primary-button" type="button">Save reflection</button></div>
+      </section>
+    </main>
+
+    <main id="todayPage" class="page today-page" hidden>
+      <section class="today-header">
+        <div><span class="eyebrow">EVERY DAY COUNTS</span><h1>Today 📅</h1><p id="todayPageDate">Your daily money activity, all in one place.</p></div>
+        <button class="add-circle" id="todayAddButton" type="button" aria-label="Add activity">＋</button>
+      </section>
+
+      <section class="today-overview">
+        <div class="today-overview-title"><div><small>TODAY</small><strong id="todayOverviewDate">—</strong></div><span id="todayStatusPill">On track</span></div>
+        <div class="today-metrics">
+          <article class="income-metric"><span>↗</span><small>Income</small><strong id="todayIncome">$0</strong></article>
+          <article class="spent-metric"><span>↘</span><small>Spent</small><strong id="todaySpent">$0</strong></article>
+          <article class="saved-metric"><span>🌱</span><small>Saved</small><strong id="todaySaved">$0</strong></article>
+        </div>
+        <div class="today-win"><span>💚</span><div><small>TODAY'S POSITION</small><strong id="todayPosition">$0 remaining</strong><p id="todayPositionMessage">Add income or spending to begin.</p></div></div>
+      </section>
+
+      <section class="today-section">
+        <div class="section-title-row"><h2>Quick add</h2><span class="garden-caption">Saved on this phone</span></div>
+        <div class="today-quick-grid">
+          <button data-today-add="income"><span class="today-quick-icon income">＋</span><strong>Income</strong><small>Salary or other income</small></button>
+          <button data-today-add="expense"><span class="today-quick-icon expense">−</span><strong>Expense</strong><small>Day-to-day spending</small></button>
+          <button data-today-add="journey"><span class="today-quick-icon journey">🚗</span><strong>Journey payment</strong><small>Reduce a tracked balance</small></button>
+          <button data-today-add="savings"><span class="today-quick-icon savings">🌱</span><strong>Transfer to savings</strong><small>Grow your Security fund</small></button>
+        </div>
+      </section>
+
+      <section class="today-section today-activity-card">
+        <div class="section-title-row"><h2>Activity</h2><button class="plain-button" id="todayViewAllButton" type="button">This month</button></div>
+        <div class="today-activity" id="todayActivity"></div>
+      </section>
+
+      <section class="today-section month-summary-card">
+        <div class="section-title-row"><h2>This month</h2><span id="todayMonthName" class="garden-caption"></span></div>
+        <div class="month-summary-grid">
+          <div><small>Income</small><strong id="monthIncome">$0</strong></div>
+          <div><small>Expenses</small><strong id="monthExpenses">$0</strong></div>
+          <div><small>Journey payments</small><strong id="monthJourney">$0</strong></div>
+          <div><small>Savings</small><strong id="monthSavings">$0</strong></div>
+        </div>
+        <div class="money-left-card"><span>💚</span><div><small>MONEY LEFT THIS MONTH</small><strong id="monthMoneyLeft">$0</strong><p>Income minus spending, savings and Journey payments.</p></div></div>
+      </section>
+    </main>
+
+    <nav class="bottom-nav" aria-label="Primary navigation">
+      <button data-tab="journey"><span>🚗</span><small>Journey</small></button><button data-tab="garden"><span>🌳</span><small>Garden</small></button><button data-tab="dreams"><span>⭐</span><small>Dreams</small></button><button class="active" data-tab="home" aria-current="page"><span>🏡</span><small>Home</small></button><button data-tab="today"><span>📅</span><small>Today</small></button><button data-tab="adventures"><span>🌊</span><small>Adventures</small></button><button data-tab="memories"><span>📖</span><small>Memories</small></button>
+    </nav>
+  </div>
+
+  <aside class="sheet" id="detailSheet" aria-hidden="true"><button class="sheet-backdrop" data-close-sheet aria-label="Close"></button><div class="sheet-panel" role="dialog" aria-modal="true"><div class="sheet-toolbar"><div class="sheet-handle"></div><button class="sheet-close" data-close-sheet type="button">Done</button></div><div class="sheet-icon" id="sheetIcon">🏡</div><h2 id="sheetTitle">Homebound</h2><p id="sheetDescription"></p><div id="sheetContent"></div></div></aside>
+  <aside class="sheet" id="notificationsSheet" aria-hidden="true"><button class="sheet-backdrop" data-close-notifications></button><div class="sheet-panel"><div class="sheet-toolbar"><div class="sheet-handle"></div><button class="sheet-close" data-close-notifications type="button">Done</button></div><div class="sheet-icon">🔔</div><h2>Notifications</h2><div class="notification-list"><article><span>📍</span><div><strong>Your next stop is due soon.</strong><small>Review your current milestone.</small></div></article><article><span>🌊</span><div><strong>Esperance is getting closer.</strong><small>103 days until your next adventure.</small></div></article><article><span>💾</span><div><strong>Your backup is ready.</strong><small>Keep a fresh copy somewhere safe.</small></div></article></div></div></aside>
+  <script src="app.js?v=9" defer></script>
+</body>
+</html>
