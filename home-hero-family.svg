@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">A couple looking toward their future home</title>
+  <desc id="desc">Warm anime-inspired illustration of a wife and husband seen from behind, holding hands on a path toward a house.</desc>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#fff8e8"/><stop offset="1" stop-color="#f7edcf"/></linearGradient>
+    <linearGradient id="hill1" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#d8efad"/><stop offset="1" stop-color="#b8dd8a"/></linearGradient>
+    <linearGradient id="hill2" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#a8d984"/><stop offset="1" stop-color="#7fc66e"/></linearGradient>
+    <linearGradient id="path" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#fff2bf"/><stop offset="1" stop-color="#f4d891"/></linearGradient>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#2f4a3f" flood-opacity=".15"/></filter>
+  </defs>
+  <rect width="1200" height="760" rx="54" fill="url(#sky)"/>
+  <circle cx="960" cy="126" r="70" fill="#ffd466" opacity=".95"/>
+  <circle cx="960" cy="126" r="94" fill="#ffd466" opacity=".18"/>
+  <g fill="#fff" opacity=".75"><ellipse cx="740" cy="150" rx="82" ry="30"/><ellipse cx="796" cy="140" rx="50" ry="37"/><ellipse cx="250" cy="116" rx="70" ry="25"/><ellipse cx="300" cy="108" rx="42" ry="31"/></g>
+  <path d="M0 380C180 292 330 310 490 378C660 450 832 302 1200 350V760H0Z" fill="url(#hill1)"/>
+  <path d="M0 500C220 410 390 452 560 526C730 600 900 414 1200 460V760H0Z" fill="url(#hill2)"/>
+  <path d="M550 760C570 650 630 590 714 535C790 485 836 442 870 392C888 366 916 358 940 372C964 386 970 416 952 442C912 500 860 551 770 610C700 656 662 704 650 760Z" fill="url(#path)"/>
+  <path d="M605 760C620 679 666 624 740 574C818 521 878 470 916 415" fill="none" stroke="#fff9df" stroke-width="10" stroke-linecap="round" stroke-dasharray="18 26" opacity=".9"/>
+  <g transform="translate(788 244)" filter="url(#soft)">
+    <path d="M58 120L178 28L300 120V262H58Z" fill="#fffaf0" stroke="#d6b585" stroke-width="5"/>
+    <path d="M36 118L178 4L322 118L298 142L178 48L60 142Z" fill="#d96d48"/>
+    <rect x="105" y="158" width="57" height="104" rx="4" fill="#ad6a43"/>
+    <rect x="210" y="150" width="50" height="48" rx="3" fill="#8ec6df" stroke="#fff" stroke-width="6"/>
+    <rect x="210" y="207" width="50" height="48" rx="3" fill="#8ec6df" stroke="#fff" stroke-width="6"/>
+    <rect x="254" y="32" width="26" height="54" fill="#b97550"/>
+    <circle cx="150" cy="212" r="4" fill="#f5d77a"/>
+  </g>
+  <g transform="translate(1000 205)"><rect x="-25" y="130" width="46" height="155" rx="20" fill="#81523b"/><circle cx="0" cy="80" r="85" fill="#73b65d"/><circle cx="-58" cy="112" r="54" fill="#86c66c"/><circle cx="62" cy="118" r="57" fill="#65aa53"/></g>
+  <g opacity=".95">
+    <g transform="translate(690 447)">
+      <path d="M0 0C-32 4-56 32-58 67L-62 180L3 184L28 68C34 35 24 7 0 0Z" fill="#f29a47"/>
+      <path d="M-29 179L-42 288L-6 288L9 184Z" fill="#f5eee5"/>
+      <path d="M8 183L23 288L59 288L42 177Z" fill="#f5eee5"/>
+      <ellipse cx="0" cy="-20" rx="34" ry="39" fill="#9a5f3e"/>
+      <path d="M-39-25C-29-73 25-72 39-29C41-5 34 12 29 26L17 4L5 18L-8 4L-20 20L-33 3Z" fill="#3b2b25"/>
+      <path d="M32 72C58 88 73 105 90 124" stroke="#f29a47" stroke-width="20" stroke-linecap="round"/>
+    </g>
+    <g transform="translate(810 430)">
+      <path d="M0 0C-31 2-55 28-56 64L-56 184L38 184L40 66C42 30 28 3 0 0Z" fill="#3f8152"/>
+      <path d="M-35 181L-38 292L1 292L8 184Z" fill="#344b64"/>
+      <path d="M8 184L16 292L55 292L39 181Z" fill="#344b64"/>
+      <ellipse cx="0" cy="-22" rx="35" ry="40" fill="#a86e49"/>
+      <path d="M-37-24C-31-63 17-72 37-37C45-17 37 8 29 20L19-4L4 10L-8-4L-23 13L-31-4Z" fill="#2a2523"/>
+      <path d="M-46 76C-68 91-83 106-99 125" stroke="#3f8152" stroke-width="20" stroke-linecap="round"/>
+    </g>
+    <path d="M780 555C786 548 796 548 803 555" stroke="#9f6544" stroke-width="13" stroke-linecap="round"/>
+  </g>
+  <g fill="#fff8e8" opacity=".9"><circle cx="130" cy="646" r="9"/><circle cx="160" cy="670" r="8"/><circle cx="1080" cy="626" r="9"/></g>
+  <g fill="#f79d70"><circle cx="160" cy="640" r="7"/><circle cx="1100" cy="650" r="8"/></g>
+</svg>
